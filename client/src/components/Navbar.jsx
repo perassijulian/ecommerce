@@ -3,8 +3,9 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { logout } from "../redux/userRedux";
 
 const Container = styled.div`
   height: 60px;
@@ -53,6 +54,7 @@ const Logo = styled.h1`
   font-weight: bold;
   ${mobile({ fontSize: "24px" })}
 `;
+
 const Right = styled.div`
   flex: 1;
   display: flex;
@@ -70,6 +72,10 @@ const MenuItem = styled.div`
 
 const Navbar = () => {
   const quantity = useSelector(state=>state.cart.quantity)
+  const user = useSelector((state) => state.user.currentUser);
+
+  const dispatch = useDispatch();
+
   return (
     <Container>
       <Wrapper>
@@ -84,18 +90,25 @@ const Navbar = () => {
           <Logo>LAMA.</Logo>
         </Center>
         <Right>
-          <Link to="/register" style={{"text-decoration": "none"}}>
-            <MenuItem>REGISTER</MenuItem>
-          </Link>
-          <Link to="/login" style={{"text-decoration": "none"}}>
-            <MenuItem>SIGN IN</MenuItem>
-          </Link>
+          { !user && 
+            <Link to="/register" style={{"textDecoration": "none"}}>
+              <MenuItem>REGISTER</MenuItem>
+            </Link>
+          }
+          { !user && 
+            <Link to="/login" style={{"textDecoration": "none"}}>
+              <MenuItem>SIGN IN</MenuItem>
+            </Link>
+          }
+          { user &&
+            <MenuItem onClick={() => dispatch(logout())}>LOG OUT</MenuItem>
+          }
           <Link to="/cart">
-          <MenuItem>
-            <Badge badgeContent={quantity} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
+            <MenuItem>
+              <Badge badgeContent={quantity} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </MenuItem>
           </Link>
         </Right>
       </Wrapper>
