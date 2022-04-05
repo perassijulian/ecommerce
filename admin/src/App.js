@@ -26,7 +26,7 @@ function App() {
           <Login />
         </Route>
         {admin && (
-          <>
+          <div>
             <Topbar />
             <div className="container">
               <Sidebar />
@@ -52,7 +52,7 @@ function App() {
                 <NewProduct />
               </Route>
             </div>
-          </>
+          </div>
         )}
       </Switch>
     </Router>
