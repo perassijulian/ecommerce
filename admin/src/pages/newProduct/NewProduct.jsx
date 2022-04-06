@@ -13,7 +13,10 @@ import { useDispatch } from "react-redux";
 export default function NewProduct() {
   const [inputs, setInputs] = useState({});
   const [file, setFile] = useState(null);
-  const [cat, setCat] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [size, setSize] = useState([]);
+  const [color, setColor] = useState([]);
+
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -21,8 +24,17 @@ export default function NewProduct() {
       return { ...prev, [e.target.name]: e.target.value };
     });
   };
+
   const handleCat = (e) => {
-    setCat(e.target.value.split(","));
+    setCategories(e.target.value.toLowerCase().split(","));
+  };
+
+  const handleSize = (e) => {
+    setSize(e.target.value.toUpperCase().split(","));
+  };
+
+  const handleColor = (e) => {
+    setColor(e.target.value.toLowerCase().split(","));
   };
 
   const handleClick = (e) => {
@@ -61,7 +73,7 @@ export default function NewProduct() {
         // Handle successful uploads on complete
         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          const product = { ...inputs, img: downloadURL, categories: cat };
+          const product = { ...inputs, img: downloadURL, categories, size, color};
           addProduct(product, dispatch);
         });
       }
@@ -90,15 +102,6 @@ export default function NewProduct() {
           />
         </div>
         <div className="addProductItem">
-          <label>Description</label>
-          <input
-            name="desc"
-            type="text"
-            placeholder="description..."
-            onChange={handleChange}
-          />
-        </div>
-        <div className="addProductItem">
           <label>Price</label>
           <input
             name="price"
@@ -109,7 +112,36 @@ export default function NewProduct() {
         </div>
         <div className="addProductItem">
           <label>Categories</label>
-          <input type="text" placeholder="jeans,skirts" onChange={handleCat} />
+          <input 
+            type="text" 
+            placeholder="jeans,skirts" 
+            onChange={handleCat} 
+          />
+        </div>
+        <div className="addProductItem">
+          <label>Sizes</label>
+          <input 
+            type="text" 
+            placeholder="S,M,L / 28,30,32" 
+            onChange={handleSize} 
+          />
+        </div>
+        <div className="addProductItem">
+          <label>Colors</label>
+          <input 
+            type="text" 
+            placeholder="white,black,green" 
+            onChange={handleColor} 
+          />
+        </div>
+        <div className="addProductItem">
+          <label>Description</label>
+          <input
+            name="desc"
+            type="text"
+            placeholder="description..."
+            onChange={handleChange}
+          />
         </div>
         <div className="addProductItem">
           <label>Stock</label>
