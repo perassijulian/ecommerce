@@ -87,7 +87,9 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>LAMA.</Logo>
+          <Link to="/" style={{textDecoration:'none', color:'black'}}>
+            <Logo>SKATOWN.</Logo>
+          </Link>
         </Center>
         <Right>
           { !user && 

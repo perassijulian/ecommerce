@@ -13,6 +13,7 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(50%);
   ${mobile({ height: "20vh" })}
 
 `;
@@ -41,6 +42,8 @@ const Button = styled.button`
     color:gray;
     cursor: pointer;
     font-weight: 600;
+    width: 120px;
+    border-radius: 5px;
 `;
 
 const CategoryItem = ({ item }) => {

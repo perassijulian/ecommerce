@@ -11,7 +11,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    url("https://firebasestorage.googleapis.com/v0/b/shop-889c6.appspot.com/o/1649346369323background.jpg?alt=media&token=43f42b12-9fea-4241-9c98-167f7abef09f")
       center;
   background-size: cover;
   display: flex;

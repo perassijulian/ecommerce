@@ -1,22 +1,22 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://i.ibb.co/XsdmR2c/1.png",
-      title: "SUMMER SALE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      img: "https://firebasestorage.googleapis.com/v0/b/shop-889c6.appspot.com/o/1649345573186skatepromo.jpg?alt=media&token=80a84315-e8da-4fdc-aa31-fe93183eaf86",
+      title: "BE SKATOWN SPONSORED",
+      desc: "YOU GOT IT. CONTACT US TO BE SPONSORED AND START YOUR PRO CARRER",
       bg: "f5fafd",
     },
     {
       id: 2,
-      img: "https://i.ibb.co/DG69bQ4/2.png",
-      title: "AUTUMN COLLECTION",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      img: "https://firebasestorage.googleapis.com/v0/b/shop-889c6.appspot.com/o/1649345791099summer.jpg?alt=media&token=bcbdfc98-81ff-4e49-a970-a43db9f543b4",
+      title: "SUMMER COLLECTION",
+      desc: "CHECK OUT OUR NEW COLLECTION. BE THE FIRST ONE TO WEAR THE HOTTEST TRENDS",
       bg: "fcf1ed",
     },
     {
       id: 3,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
-      title: "LOUNGEWEAR LOVE",
+      img: "https://firebasestorage.googleapis.com/v0/b/shop-889c6.appspot.com/o/1649345891487skatepromo2.jpg?alt=media&token=4934b29a-1456-4d5f-a3dd-25f157a37c41",
+      title: "SKATEBOARDS SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fbf0f4",
     },
@@ -25,21 +25,21 @@ export const sliderItems = [
   export const categories = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "SHIRT STYLE!",
-      cat:"women"
+      img: "https://firebasestorage.googleapis.com/v0/b/shop-889c6.appspot.com/o/1649344181421shoe2.jpg?alt=media&token=4c546ff5-07e8-40cd-9d6c-259350f72236",
+      title: "SKATE SHOES",
+      cat:"shoe"
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
-      cat:"coat"
+      img: "https://firebasestorage.googleapis.com/v0/b/shop-889c6.appspot.com/o/1649344249343clothes.jpg?alt=media&token=3f96c692-948a-4081-848b-db1d259952aa",
+      title: "CLOTHING",
+      cat:"clothes"
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      title: "LIGHT JACKETS",
-      cat:"jeans"
+      img: "https://firebasestorage.googleapis.com/v0/b/shop-889c6.appspot.com/o/1649344221156skateboard.jpg?alt=media&token=3c0eb2ff-a450-4bb8-881a-36e9c39de8f8",
+      title: "SKATEBOARDS",
+      cat:"skateboard"
     },
   ];
 
