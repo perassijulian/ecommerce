@@ -9,6 +9,7 @@ import {
 import app from "../../firebase";
 import { addProduct } from "../../redux/apiCalls";
 import { useDispatch } from "react-redux";
+import {Link} from "react-router-dom";
 
 export default function NewProduct() {
   const [inputs, setInputs] = useState({});
@@ -78,6 +79,7 @@ export default function NewProduct() {
         });
       }
     );
+    
   };
 
   return (
@@ -153,6 +155,9 @@ export default function NewProduct() {
         <button onClick={handleClick} className="addProductButton">
           Create
         </button>
+        <Link to="/products">
+          <button className="addProductButton" style={{backgroundColor:"red"}}>Cancel</button>
+        </Link>
       </form>
     </div>
   );

@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "./product.css";
 import Chart from "../../components/chart/Chart";
-import { productData } from "../../dummyData";
 import { Publish } from "@material-ui/icons";
 import { useSelector } from "react-redux";
 import { useEffect, useMemo, useState } from "react";
@@ -57,9 +56,9 @@ export default function Product() {
   return (
     <div className="product">
       <div className="productTitleContainer">
-        <h1 className="productTitle">Product</h1>
-        <Link to="/newproduct">
-          <button className="productAddButton">Create</button>
+        <h1 className="productTitle">{product.title}</h1>
+        <Link to="/products">
+          <button className="backButton">Back</button>
         </Link>
       </div>
       <div className="productTop">
@@ -82,7 +81,7 @@ export default function Product() {
             </div>
             <div className="productInfoItem">
               <span className="productInfoKey">in stock:</span>
-              <span className="productInfoValue">{product.inStock}</span>
+              <span className="productInfoValue">{product.inStock? "Yes" : "No"}</span>
             </div>
           </div>
         </div>
@@ -96,6 +95,12 @@ export default function Product() {
             <input type="text" placeholder={product.desc} />
             <label>Price</label>
             <input type="text" placeholder={product.price} />
+            <label>Sizes</label>
+            <input type="text" placeholder={product.size} />
+            <label>Colors</label>
+            <input type="text" placeholder={product.color} />
+            <label>Categories</label>
+            <input type="text" placeholder={product.categories} />
             <label>In Stock</label>
             <select name="inStock" id="idStock">
               <option value="true">Yes</option>

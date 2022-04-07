@@ -9,7 +9,7 @@
   justify-content: space-between;
 }
 
-.productAddButton {
+.backButton {
   width: 80px;
   border: none;
   padding: 5px;
@@ -80,8 +80,8 @@
 }
 
 .productFormLeft {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .productFormLeft > label {
@@ -94,6 +94,7 @@
   border: none;
   padding: 5px;
   border-bottom: 1px solid gray;
+  width: 200px;
 }
 
 .productFormLeft >select{
