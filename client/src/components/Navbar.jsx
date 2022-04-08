@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { logout } from "../redux/userRedux";
 
 const Container = styled.div`
@@ -73,8 +73,14 @@ const MenuItem = styled.div`
 const Navbar = () => {
   const quantity = useSelector(state=>state.cart.quantity)
   const user = useSelector((state) => state.user.currentUser);
-
+  
+  const history = useHistory();
   const dispatch = useDispatch();
+
+  const handleLogOut = () => {
+    dispatch(logout());
+    history.push('/');
+  }
 
   return (
     <Container>
@@ -103,7 +109,7 @@ const Navbar = () => {
             </Link>
           }
           { user &&
-            <MenuItem onClick={() => dispatch(logout())}>LOG OUT</MenuItem>
+            <MenuItem onClick={handleLogOut}>LOG OUT</MenuItem>
           }
           <Link to="/cart">
             <MenuItem>
