@@ -12,7 +12,6 @@ const stripeRoute = require("./routes/stripe");
 const path = require("path");
 const cors = require("cors");
 
-console.log('MONGODB_URI: ', process.env.MONGODB_URI)
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("DB Connection Successfull!"))
