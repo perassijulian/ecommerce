@@ -67,7 +67,7 @@ const Register = () => {
 
   const handleCreate = (e) => {
     e.preventDefault();
-    password === password2 
+    password !== password2 
       ? alert("Your passwords are not equal") 
       : register(dispatch, {username, email, password})
   }
