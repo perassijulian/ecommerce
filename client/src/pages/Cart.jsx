@@ -194,7 +194,7 @@ const Cart = () => {
             <TopText>Shopping Bag({cart.products.length})</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
-          <TopButton type="filled">CHECKOUT NOW</TopButton>
+          <div></div>
         </Top>
         <Bottom>
           <Info>
@@ -248,8 +248,8 @@ const Cart = () => {
               <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout
-              name="Lama Shop"
-              image="https://avatars.githubusercontent.com/u/1486366?v=4"
+              name="SKATOWN"
+              image="https://i1.sndcdn.com/avatars-ifzyyWHgOyu7FfPy-CQm0nQ-t500x500.jpg"
               billingAddress
               shippingAddress
               description={`Your total is $${cart.total}`}
