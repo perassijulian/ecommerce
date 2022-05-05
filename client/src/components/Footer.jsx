@@ -26,10 +26,12 @@ const Logo = styled.h1``;
 
 const Desc = styled.p`
   margin: 20px 0px;
+  text-align: justify;
 `;
 
 const SocialContainer = styled.div`
   display: flex;
+  justify-content: space-around;
 `;
 
 const SocialIcon = styled.div`
@@ -78,6 +80,11 @@ const ContactItem = styled.div`
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+`;
+
+const PaymentContainer = styled.div`
+    display: flex;
+    justify-content: center;
 `;
 
 const Payment = styled.img`
@@ -135,7 +142,9 @@ const Footer = () => {
         <ContactItem>
           <MailOutline style={{marginRight:"10px"}} /> perassijulian@gmail.com
         </ContactItem>
-        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+        <PaymentContainer>
+          <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+        </PaymentContainer>
       </Right>
     </Container>
   );
